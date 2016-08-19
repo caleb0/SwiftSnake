@@ -58,7 +58,7 @@ class GameScene: SKScene {
     
     var gameOver = UILabel()
     var snakeHead = Body(imageNamed:"snakehead") // our snake head
-    var grid:Grid = Grid(blockSize:0, rows:1, cols:1) // empty init of grid
+    var grid:Grid = Grid(blockSize:0, rows:1, cols:1, renderGrid: shouldRenderGrid) // empty init of grid
     var apple: Fruit = Fruit(imageNamed: "apple")
     var mySnake: [Body] = [] // our snake is defined as an array of bodies
     
@@ -68,9 +68,8 @@ class GameScene: SKScene {
         scaleMode = .ResizeFill
         view.backgroundColor = UIColor.blackColor()
         
-        
         let blockSize = viewWidth / 28
-        grid = Grid(blockSize:blockSize, rows:gridRows, cols:gridCols)
+        grid = Grid(blockSize:blockSize, rows:gridRows, cols:gridCols, renderGrid: shouldRenderGrid)
         grid.addChild(apple)
         grid.position = CGPointMake (CGRectGetMidX(view.frame),CGRectGetMidY(view.frame))
         addChild(grid)

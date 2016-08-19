@@ -16,6 +16,7 @@
 		69752D3C1D6345EB001370D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69752D3B1D6345EB001370D3 /* Assets.xcassets */; };
 		69CFFA0A1D66BAAC00BE3598 /* pauseSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CFFA091D66BAAC00BE3598 /* pauseSceneViewController.swift */; };
 		69CFFA0C1D66BE6D00BE3598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CFFA0B1D66BE6D00BE3598 /* Main.storyboard */; };
+		69CFFA0E1D66D34E00BE3598 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CFFA0D1D66D34E00BE3598 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		69752D3B1D6345EB001370D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69CFFA091D66BAAC00BE3598 /* pauseSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pauseSceneViewController.swift; sourceTree = "<group>"; };
 		69CFFA0B1D66BE6D00BE3598 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		69CFFA0D1D66D34E00BE3598 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				15F135E91D49A5AF0055FE77 /* Info.plist */,
 				15F135F11D49A6BF0055FE77 /* Grid.swift */,
 				69CFFA091D66BAAC00BE3598 /* pauseSceneViewController.swift */,
+				69CFFA0D1D66D34E00BE3598 /* ViewController2.swift */,
 			);
 			path = Snakee;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				15F135E01D49A5AE0055FE77 /* GameViewController.swift in Sources */,
 				15F135F21D49A6BF0055FE77 /* Grid.swift in Sources */,
 				15F135DA1D49A5AE0055FE77 /* AppDelegate.swift in Sources */,
+				69CFFA0E1D66D34E00BE3598 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
