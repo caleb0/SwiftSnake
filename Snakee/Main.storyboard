@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e9S-HT-K57">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Mr9-WX-xAd">
+            <objects>
+                <viewController id="e9S-HT-K57" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VfC-w0-1aK"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hS-75-9k1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D7L-BX-RrA">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-IU-4Gb">
+                                <rect key="frame" x="225" y="196" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="rPH-6R-eFL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-8m-dby">
+                                <rect key="frame" x="217" y="98" width="47" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a2m-8m-dby" firstAttribute="top" secondItem="VfC-w0-1aK" secondAttribute="bottom" constant="78" id="HQf-Kv-RfK"/>
+                            <constraint firstItem="a2m-8m-dby" firstAttribute="centerX" secondItem="D7L-BX-RrA" secondAttribute="centerX" id="Qun-RH-I5v"/>
+                            <constraint firstItem="UqN-IU-4Gb" firstAttribute="top" secondItem="a2m-8m-dby" secondAttribute="bottom" constant="77" id="nIT-Vh-ovO"/>
+                            <constraint firstItem="UqN-IU-4Gb" firstAttribute="centerX" secondItem="a2m-8m-dby" secondAttribute="centerX" id="q0G-Hs-Is3"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLE-1j-R71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="249"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Snakee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD7-hm-ik8">
+                                <rect key="frame" x="436" y="6" width="39" height="29"/>
+                                <animations/>
+                                <state key="normal" image="pause-2"/>
+                                <connections>
+                                    <action selector="onButtonPress:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Avz-DK-rX8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AD7-hm-ik8" secondAttribute="trailing" constant="-15" id="Bu7-nm-iCi"/>
+                            <constraint firstItem="AD7-hm-ik8" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="6" id="G41-HG-VcS"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="AD7-hm-ik8" id="VkL-Kc-ANm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause-2" width="24" height="24"/>
+    </resources>
+</document>
